@@ -113,15 +113,17 @@ log `ArrowLeft` events. You can try it with other keys (`Shift`, `Control`,
 Let's start moving left then:
 
 ```javascript
-document.addEventListener("keydown", function(e) {
-  if (e.key === "ArrowLeft") {
-    let leftNumbers = dodger.style.left.replace("px", "");
-    let left = parseInt(leftNumbers, 10);
+document.addEventListener("keydown", function(e) {   //Adding an EventListener for keydown
+  if (e.key === "ArrowLeft") {    //Checking if the keydown was arrow left
+    let leftNumbers = dodger.style.left.replace("px", "");   //replacing "px" with ""
+    let left = parseInt(leftNumbers, 10);  //"10" => 10
 
-    dodger.style.left = `${left - 1}px`;
+    dodger.style.left = `${left - 1}px`; //putting the px back
   }
 });
+
 ```
+
 
 So what are we doing here? Well, if we catch a left arrow keydown, we move the
 dodger 1 pixel to the left. (We have to parse the pixels as integers and then

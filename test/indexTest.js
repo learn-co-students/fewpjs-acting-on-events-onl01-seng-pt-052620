@@ -32,4 +32,4 @@ describe('moveDodgerRight', () => {
 
     expect(newPosition).to.be.above(left)
   })
-})
+}) 
