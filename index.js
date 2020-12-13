@@ -1,12 +1,5 @@
 // Your code here
-document.addEventListener("keydown", function(e) {
-    if (e.key === "ArrowLeft") {
-      let leftNumbers = dodger.style.left.replace("px", "");
-      let left = parseInt(leftNumbers, 10);
-   
-      dodger.style.left = `${left - 1}px`;
-    }
-  });
+
 
 
 function moveDodgerLeft() {
@@ -18,15 +11,6 @@ function moveDodgerLeft() {
     }
   }
 
-
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "ArrowRight") {
-        let leftNumbers = dodger.style.left.replace("px", "");
-        let left = parseInt(leftNumbers, 10);
-   
-      dodger.style.left = `${left + 1}px`;
-    }
-  })
 
   function moveDodgerRight() {
     let leftNumbers = dodger.style.left.replace("px", "");
